@@ -4,7 +4,7 @@ $app.rootCmd.addCommand(new Command({
         // console.log("cmd: ", JSON.stringify(cmd))
         // console.log("args: ", JSON.stringify(args))
         if (args.length < 1) {
-            console.log("Usage: import_sqlite <externalDB> [table_list]")
+            console.log("Usage: pocketbase import_sqlite <externalDB> [table_list]")
             console.log("Example: pocketbase import_sqlite /Users/Shared/externalDB.sqlite")
             console.log("Example: pocketbase import_sqlite /Users/Shared/externalDB.sqlite \"'table1','table2'\"")
             return;
@@ -88,7 +88,7 @@ $app.rootCmd.addCommand(new Command({
                     }))
                 
                 }
-                console.log(`creating collection ${collection}...`)
+                console.log(`creating collection ${tbl_name}...`)
                 $app.dao().saveCollection(collection)
             } catch (e) {
                 console.log('create error: ', e)
