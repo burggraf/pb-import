@@ -2,9 +2,9 @@
 
 A set of Pocketbase command-line hooks to enable data import directly into your Pocketbase project's database.
 
-## SQLite
+## SQLite: Import SQLite Databases
 
-Import an existing SQLite database on disk into the current Pocketbase project.
+Import an existing SQLite database on disk into the current Pocketbase project.  You can import all the tables in the external database (the default) or provide an optional list of tables to be imported.  One collection is created for each table using very basic data types, then data is imported from the external SQLite database into your Pocketbase database (`pb_data/data.db`).
 
 - Start `pocketbase serve` if it's not already running
     - example: `pocketbase serve --http 0.0.0.0:8090`
